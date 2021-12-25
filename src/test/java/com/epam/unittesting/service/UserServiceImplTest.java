@@ -125,6 +125,7 @@ class UserServiceImplTest extends BaseTest {
      */
     @Test
     void get_throws_entity_not_found_exception() {
+        String env= System.getenv("env");
         // mock your methods
         when(userRepository.findById(any())).thenReturn(Optional.empty());
 
